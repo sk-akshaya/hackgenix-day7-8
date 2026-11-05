@@ -1,77 +1,85 @@
 console.log("lab ready");
 const customer=prompt("enter your name:"), price=250;
-let quantity=Number(prompt("enter the quantity:"));
-if (quantity <= 0 || Number.isNaN(quantity)) {
-    alert("Enter a valid number");
-}
-console.log(`${customer} is buying ${quantity} items at Rs.${price}`);
+let qty=document.getElementById("quantity");
+let btn=document.getElementById("btn");
+let output=document.getElementById("output");
+btn.addEventListener('click',function(){
+        let quantity = Number(qty.value);
+    if (isNaN(quantity) || quantity <= 0) {
+        output.textContent = "Enter a valid quantity";
+        return;
+    }
+output.textContent=`${customer} is buying ${quantity} items at Rs.${price}`;
 let calculateAmount=price*quantity;
 let discount=calculateAmount>=1000? 10/100 : 5/100;
 let gst=calculateAmount*(18/100);
 let total=(calculateAmount-(calculateAmount*discount))+gst;
-console.log("-------bill-------");
-console.log(`Customer Name: ${customer}`);
-console.log(`Price: ${price.toFixed(2)}`);
-console.log(`Quantity: ${quantity}`);
-console.log(`Discount: ${discount.toFixed(2)}`);
-console.log(`GST: ${gst.toFixed(2)}`);
-console.log(`Total: ${total.toFixed(2)}`);
+output.textContent=`-------bill-------\n`+
+`Customer Name: ${customer}\n` +
+`Price: Rs.${price.toFixed(2)}\n` +
+`Quantity: ${quantity}\n` +
+`Amount: Rs.${calculateAmount.toFixed(2)}\n` +
+`Discount: Rs.${(calculateAmount*discount).toFixed(2)}\n` +
+`GST: Rs.${gst.toFixed(2)}\n` +
+`Total: Rs.${total.toFixed(2)}`;
+});
 
 
 
 
 
-
-
+let gradeOutput=document.getElementById("gradeOutput");
+let btnGrade=document.getElementById("btnGrade");
+btnGrade.addEventListener('click',function(){
 const mark=Number(prompt("enter your mark(0-100):"));
 let grade="";
 if (mark < 0 || mark >100 || Number.isNaN(mark)) {
     alert("Enter a valid mark");
 }else{
 if (mark>=90 && mark<=100){
-    console.log("GRADE:A+");
+    gradeOutput.textContent="GRADE:A+\n";
     grade="A+";
 }else if(mark<=89 && mark>=75){
-    console.log("GRADE:A");
+    gradeOutput.textContent="GRADE:A\n";
     grade="A";
 }else if(mark<=74 && mark>=60){
-    console.log("GRADE:B");
+    gradeOutput.textContent="GRADE:B\n";
     grade="B";
 }else if(mark<=59 && mark>=40){
-    console.log("GRADE:C");
+    gradeOutput.textContent="GRADE:C\n";
     grade="C";
 }else {
-    console.log("FAIL");
+    gradeOutput.textContent="FAIL\n";
     grade="F";
-}
+}}
 
-
-switch (grade) {
+switch(grade){
     case "A+":
-        console.log("what is the use of this grade? hold the topper tag.");
+        gradeOutput.textContent+="REMARK:what is the use of this grade? hold the topper tag.";
         break;
 
     case "A":
-        console.log("one more step to reach the peak.");
+        gradeOutput.textContent+="REMARK:one more step to reach the peak.";
         break;
 
     case "B":
-        console.log("not a topper, not a loser. Being in a safe state.");
+        gradeOutput.textContent+="REMARK:not a topper, not a loser. Being in a safe state.";
         break;
 
     case "C":
-        console.log("be careful, you are going to fail nextime.");
+        gradeOutput.textContent+="REMARK:be careful, you are going to fail nextime.";
         break;
 
     case "F":
-        console.log("fail again,fail better, the world is yours");
+        gradeOutput.textContent+="REMARK:fail again,fail better, the world is yours";
         break;
 
     default:
-        console.log("Invalid grade");
+        gradeOutput.textContent+="REMARK:Invalid grade";
 }
+});
 
-}
+
 
 
 let num=Number(prompt("enter a number:"));
@@ -122,18 +130,18 @@ for (let row = 1; row <= 5; row++) {
 }
 
 for (let i = 1; i <= 30; i++) {
- if (i % 3 === 0) {
-    console.log("Fizz");
- } else if (i % 5 === 0) {
-    console.log("Buzz");
- }else if (i % 15 === 0) {
+ if (i % 15 === 0) {
     console.log("FizzBuzz");
+ } else if (i % 3 === 0) {
+    console.log("Fizz");
+ }else if (i % 5 === 0) {
+    console.log("Buzz");
  }else {
     console.log(i);
 }
 }
 
-
+console.log("the prime numbers between 1-50")
 for (let num = 2; num <= 50; num++) {
     let isPrime = true;
     for (let i = 2; i < num; i++) {
