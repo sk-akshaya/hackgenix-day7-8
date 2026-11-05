@@ -105,3 +105,44 @@ if (num <= 0 || Number.isNaN(num)) {
     }
 
 
+
+for (let row = 1; row <= 5; row++) {
+ let line = "";
+ for (let star = 1; star <= row; star++) {
+ line += "*";
+ }
+ console.log(line);
+}
+for (let row = 1; row <= 5; row++) {
+ let line = "";
+ for (let i = 1; i <= row; i++) {
+ line += i;
+ }
+ console.log(line);
+}
+
+for (let i = 1; i <= 30; i++) {
+ if (i % 3 === 0) {
+    console.log("Fizz");
+ } else if (i % 5 === 0) {
+    console.log("Buzz");
+ }else if (i % 15 === 0) {
+    console.log("FizzBuzz");
+ }else {
+    console.log(i);
+}
+}
+
+
+for (let num = 2; num <= 50; num++) {
+    let isPrime = true;
+    for (let i = 2; i < num; i++) {
+        if (num % i === 0) {
+            isPrime = false;
+            break;
+        }
+    }
+    if (isPrime) {
+        console.log(num);
+    }
+}
