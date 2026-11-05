@@ -1,0 +1,85 @@
+1. Which keyword declares a variable that cannot be reassigned?
+(a) let (b) var (c) const (d) fixed
+ANSWER:(c) const
+
+2. What does typeof "5" return?
+(a) number (b) string (c) text (d) undefined
+ANSWER:(b) string
+
+3. Which is a valid variable name?
+(a) 2name (b) my-name (c) myName (d) let
+ANSWER:(c) myName
+
+4. What is the result of "5" + 2?
+(a) 7 (b) "52" (c) NaN (d) Error
+ANSWER:(b) "52"
+
+5. What is the result of "5" - 2?
+(a) 3 (b) "52" (c) NaN (d) Error
+ANSWER:(a) 3
+
+6. Which operator checks both value and type?
+(a) = (b) == (c) === (d) =>
+ANSWER:(c) ===
+
+7. What is 7 % 3?
+(a) 2 (b) 1 (c) 0 (d) 2.33
+ANSWER:(b) 1
+
+8. What type of value does prompt() return?
+(a) number (b) boolean (c) string (d) object
+ANSWER:(c) string
+
+9. Which of these is falsy?
+(a) "0" (b) [] (c) 0 (d) "false"
+ANSWER:(c) 0
+
+10. What is 2 ** 3?
+(a) 6 (b) 8 (c) 9 (d) 5
+ANSWER:(b) 8
+
+11. What does typeof null return?
+(a) null (b) undefined (c) object (d) number
+ANSWER:(c) object
+
+12. Which loop always runs at least once?
+(a) for (b) while (c) do...while (d) for...of
+ANSWER:(c) do...while
+
+13. What does break do inside a loop?
+(a) Skips one round (b) Leaves the loop completely (c) Restarts the loop (d) Pauses for a second
+ANSWER:(b) Leaves the loop completely
+
+14. What does continue do inside a loop?
+(a) Stops the program (b) Skips the rest of this round and goes to the next (c) Leaves the loop (d)
+Repeats the same round
+ANSWER:(b) Skips the rest of this round and goes to the next
+
+15. Which statement writes a message to the Console?
+(a) print() (b) echo() (c) console.log() (d) document.log()
+ANSWER:(c) console.log()
+
+16. What is x after: let x = 5; x += 3;
+(a) 5 (b) 3 (c) 8 (d) 53
+ANSWER:(c) 8
+
+17. What does condition ? a : b do?
+(a) Always returns a (b) Returns a if the condition is true, otherwise b (c) Loops a and b (d)
+Compares a and b
+ANSWER:(b) Returns a if the condition is true, otherwise b
+
+18. Which loop prints 1 2 3?
+HackGeniX | Day 7 & 8 Course Material Page 27
+(a) for (let i = 1; i < 3; i++) (b) for (let i = 1; i <= 3; i++) (c) for (let i = 0; i <= 3; i++) (d) for (let i = 3; i <=
+1; i++)
+ANSWER:(b) for (let i = 1; i <= 3; i++)
+
+19. Where is a script tag with src normally placed?
+(a) Inside the title (b) Just before the closing body tag (c) After the closing html tag (d) Inside a CSS
+file
+ANSWER:(b) Just before the closing body tag
+
+20. What is NaN?
+(a) A string (b) A special number value meaning Not a Number (c) The same as null (d) A keyword
+for loops
+ANSWER:(b) A special number value meaning Not a Number
