@@ -96,3 +96,23 @@ document.getElementById("sort").addEventListener("click",()=>{
     showTable(rankedReport);
 });
 showTable(report);
+
+
+let json=document.getElementById("json");
+json.textContent=JSON.stringify(report,null,2);
+document.getElementById("parseBtn").addEventListener("click",()=>{
+    let input=document.getElementById("jsonInput").value;
+    let message=document.getElementById("message");
+    let parsedData=document.getElementById("parsedData");
+    try{
+        let data=JSON.parse(input);
+        message.textContent="Valid JSON!";
+        message.style.color="green";
+        parsedData.textContent=JSON.stringify(data,null,2);
+    }
+    catch(error){
+        message.textContent="Invalid JSON! Please check your input.";
+        message.style.color="red";
+        parsedData.textContent="";
+    }
+});
