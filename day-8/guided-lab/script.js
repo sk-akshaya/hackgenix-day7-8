@@ -50,3 +50,49 @@ console.log(`Topper: ${topper.name} - ${total(topper)}`);
 console.log(`Maths Average: ${(subjectAverage.maths/students.length).toFixed(2)}`);
 console.log(`Science Average: ${(subjectAverage.science/students.length).toFixed(2)}`);
 console.log(`English Average: ${(subjectAverage.english/students.length).toFixed(2)}`);
+
+
+let sortedReport=[...report].sort((a,b)=>b.total-a.total);
+let rankedReport=sortedReport.map((s,i)=>({
+    ...s,
+    rank:i+1
+}));
+console.table(rankedReport);
+
+
+let board=document.getElementById("board");
+function showTable(list){
+    let rows=list.map((s)=>{
+        return `<tr>
+            <td>${s.name}</td>
+            <td>${s.maths || "-"}</td>
+            <td>${s.science || "-"}</td>
+            <td>${s.english || "-"}</td>
+            <td>${s.total}</td>
+            <td>${s.average}</td>
+            <td>${s.grade}</td>
+        </tr>`;
+    }).join("");
+    board.innerHTML=`
+        <tr>
+            <th>Name</th>
+            <th>Maths</th>
+            <th>Science</th>
+            <th>English</th>
+            <th>Total</th>
+            <th>Average</th>
+            <th>Grade</th>
+        </tr>
+        ${rows}
+    `;
+}
+document.getElementById("all").addEventListener("click",()=>{
+    showTable(report);
+});
+document.getElementById("passed").addEventListener("click",()=>{
+    showTable(passed.map(s=>report.find(r=>r.name===s.name)));
+});
+document.getElementById("sort").addEventListener("click",()=>{
+    showTable(rankedReport);
+});
+showTable(report);
