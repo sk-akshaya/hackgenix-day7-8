@@ -1,0 +1,74 @@
+<!--Build a simple interest or EMI calculator page with input fields, a button, validation and clear
+messages.*/-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Interest Calculator</title>
+    <style>
+        body{
+            font-family:Arial;
+            background:#f2f2f2;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            height:100vh;
+        }
+        .container{
+            background:white;
+            padding:25px;
+            border-radius:10px;
+            width:300px;
+            box-shadow:0 0 10px gray;
+        }
+        input,button{
+            width:100%;
+            padding:10px;
+            margin:8px 0;
+            box-sizing:border-box;
+        }
+        button{
+            background:green;
+            color:white;
+            border:none;
+            cursor:pointer;
+        }
+        #message{
+            margin-top:10px;
+            font-weight:bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Simple Interest Calculator</h2>
+        <input type="number" id="principal" placeholder="Enter principal amount">
+        <input type="number" id="rate" placeholder="Enter interest rate (%)">
+        <input type="number" id="time" placeholder="Enter time (years)">
+        <button onclick="calculateInterest()">Calculate</button>
+        <p id="message"></p>
+        <p id="result"></p>
+    </div>
+    <script>
+        function calculateInterest(){
+            let principal=Number(document.getElementById("principal").value);
+            let rate=Number(document.getElementById("rate").value);
+            let time=Number(document.getElementById("time").value);
+            let message=document.getElementById("message");
+            let result=document.getElementById("result");
+            message.textContent="";
+            result.textContent="";
+            if(principal<=0 || rate<=0 || time<=0){
+                message.textContent="Please enter valid positive values!";
+                message.style.color="red";
+            }
+            else{
+                let interest=(principal*rate*time)/100;
+                let total=principal+interest;
+                message.textContent="Calculation successful!";
+                message.style.color="green";
+                result.textContent="Simple Interest: ₹"+interest.toFixed(2)+" | Total Amount: ₹"+total.toFixed(2);
+            }
+        }
+    </script>
+</body>
+</html>

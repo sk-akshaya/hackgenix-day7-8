@@ -1,0 +1,50 @@
+D2. Debug the Code:
+
+Bug 1. The message always says adult.
+let age = 15; if (age = 18) { console.log("adult"); }
+ANSWER: '=' is an assignment operator, to check the condition, use comparison operator.
+CORRECTED CODE:let age = 15; if (age >= 18) { console.log("adult"); }
+
+Bug 2. The program stops with an error.
+const total = 0; for (let i = 1; i <= 3; i++) { total += i; }
+ANSWER:'total' is declared as const so it doesn't change its value.
+CORRECTED CODE:let total = 0; for (let i = 1; i <= 3; i++) { total += i; console.log(total); }
+
+Bug 3. Adding 5 gives a strange answer.
+let age = prompt("Your age?"); // user types 20 console.log(age + 5);
+ANSWER: prompt always returns string so answer become 205
+CORRECTED CODE:let age = Number(prompt("Your age?")); // user types 20 console.log(age + 5);
+
+Bug 4. The loop prints nothing useful and then an error.
+for (let i = 1; i <= 3; i++); { console.log(i); }
+ANSWER:';' is placed after the parenthesis leads to end the loop.
+CORRECTED CODE: for (let i = 1; i <= 3; i++) { console.log(i); }
+
+Bug 5. The browser tab freezes.
+let n = 5; while (n > 0) { console.log(n); }
+ANSWER: the condition given is never get false, so it has no end, that's why browser tab freezes. And also missing of decrement operator.
+CORRECTED CODE:let n = 5; while (n > 0) { console.log(n); n-=1;  }
+
+Bug 6. Tuesday is printed together with Monday.
+let day = 1;
+switch (day) {
+ case 1: console.log("Monday");
+ case 2: console.log("Tuesday");
+}
+ANSWER: missing of "break".
+CORRECTED CODE:
+let day = 1;
+switch (day) {
+ case 1: console.log("Monday");break;
+ case 2: console.log("Tuesday");
+}
+
+Bug 7. The first line gives an error.
+let 1stName = "Asha"; console.log(1stName);
+ANSWER: the variable must not start with number.
+CORRECTED CODE:let firstName = "Asha"; console.log(firstName);
+
+Bug 8. Nothing is printed and the Console is red.
+consle.log("Hello");
+ANSWER:spelling mistake in the word "console"
+CORRECTED CODE:console.log("Hello");

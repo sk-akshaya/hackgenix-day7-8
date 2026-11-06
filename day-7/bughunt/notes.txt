@@ -1,0 +1,48 @@
+let Price = 500
+const quantity = 3;
+let discount;
+if (quantity = 3) {
+ discount = 0.1;
+}
+let total = Price * quantity - discount;
+console.log("Total is " + total.toFixed(2);
+for (let i = 1; i <= 3; i++);
+{
+ console.log(i);
+}
+let count = 0;
+while (count < 3) {
+ console.log("Round " + count);
+}
+switch (grade) {
+ case "A": console.log("Excellent");
+ case "B": console.log("Good"); break;
+ defualt: console.log("Try again");
+}
+let age = prompt("Age?");
+if (age > 17 && < 60) { console.log("Eligible"); }
+console.log(Math.Random());
+let 2ndName = "Ravi";
+let user = 'Asha";
+const PI = 3.14;
+PI = 3.14159;
+
+
+ERRORS:
+
+1. Missing closing bracket in console.log().
+2. Variable name cannot start with a number.
+3. Opening and closing quotes are mismatched.
+4. Cannot change the value of a const variable.
+5. Used `=` instead of `===` for comparison.
+6. Discount calculation is wrong.
+7. Extra semicolon after the for loop.
+8. Used loop variable outside its scope.
+9. Forgot to increment count in the while loop.
+10. Grade variable is not declared.
+11. Missing break after case A.
+12. Spelling mistake in default.
+13. Age condition is written incorrectly.
+14. Age input should be converted into a number.
+15. Math.Random() should be Math.random().
+16. PI is reassigned even though it is declared using const.
