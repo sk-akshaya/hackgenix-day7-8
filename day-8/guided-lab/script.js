@@ -24,3 +24,29 @@ let report=students.map((s)=>{
     };
 });
 console.table(report);
+
+
+
+let passed=students.filter((s)=>{
+    return [s.maths,s.science,s.english].every((mark)=>mark>=40);
+});
+let failed=students.filter((s)=>{
+    return ![s.maths,s.science,s.english].every((mark)=>mark>=40);
+});
+console.table(passed);
+console.log("Number of failed students: "+failed.length);
+
+
+let classAverage=students.reduce((sum,s)=>sum+Number(average(s)),0)/students.length;
+let topper=students.reduce((top,s)=>total(s)>total(top)?s:top);
+let subjectAverage=students.reduce((sum,s)=>{
+    sum.maths+=s.maths;
+    sum.science+=s.science;
+    sum.english+=s.english;
+    return sum;
+},{maths:0,science:0,english:0});
+console.log(`Class Average: ${classAverage.toFixed(2)}`);
+console.log(`Topper: ${topper.name} - ${total(topper)}`);
+console.log(`Maths Average: ${(subjectAverage.maths/students.length).toFixed(2)}`);
+console.log(`Science Average: ${(subjectAverage.science/students.length).toFixed(2)}`);
+console.log(`English Average: ${(subjectAverage.english/students.length).toFixed(2)}`);
