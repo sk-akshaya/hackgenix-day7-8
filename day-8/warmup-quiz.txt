@@ -1,0 +1,84 @@
+Day 8 | Part A: Warm-up Quiz:
+
+1. Which keyword defines a function?
+(a) func (b) function (c) def (d) method
+ANSWER:(b) function
+
+2. What does return do?
+(a) Prints a value (b) Sends a value back and stops the function (c) Repeats the function (d) Deletes
+the function
+ANSWER:(b) Sends a value back and stops the function
+
+3. What does f(4) give if const f = n => n * 2;
+(a) 4 (b) 8 (c) 24 (d) undefined
+ANSWER:(b) 8
+
+4. Which scope do let and const variables have?
+(a) Global only (b) Function only (c) Block (d) No scope
+ANSWER:(c) Block
+
+5. What is the index of the first item in an array?
+(a) 1 (b) 0 (c) -1 (d) first
+ANSWER:(b) 0
+
+6. Which method adds an item at the end of an array?
+(a) push() (b) pop() (c) shift() (d) add()
+ANSWER:(a) push()
+
+7. What is [4, 5, 6].length?
+(a) 2 (b) 3 (c) 6 (d) undefined
+ANSWER:(b) 3
+
+8. Which method returns a new array with every item transformed?
+(a) filter() (b) forEach() (c) map() (d) find()
+ANSWER:(c) map()
+
+9. Which method keeps only the items that pass a test?
+(a) map() (b) filter() (c) reduce() (d) join()
+ANSWER:(b) filter()
+
+10. What does reduce() return?
+(a) A new array (b) A single value (c) A boolean only (d) Nothing
+ANSWER:(b) A single value
+
+11. How do you sort numbers in ascending order?
+(a) arr.sort() (b) arr.sort((a, b) => a - b) (c) arr.order() (d) arr.sort(a - b)
+ANSWER:(b) arr.sort((a, b) => a - b)
+
+12. How do you read the name property of the object student?
+(a) student(name) (b) student.name (c) student->name (d) name.student
+ANSWER:(b) student.name
+
+13. Which gives an array of all the keys of an object?
+(a) Object.keys(obj) (b) obj.keys() (c) Object.names(obj) (d) keys(obj)
+ANSWER:(a) Object.keys(obj)
+
+14. What does JSON.stringify do?
+(a) Turns JSON text into an object (b) Turns an object into JSON text (c) Deletes an object (d) Sorts
+an object
+ANSWER:(b) Turns an object into JSON text
+
+15. What does JSON.parse do?
+(a) Turns an object into text (b) Turns JSON text into an object (c) Counts keys (d) Prints JSON
+ANSWER:(b) Turns JSON text into an object
+
+16. Which of these is valid JSON?
+(a) {name: 'Asha'} (b) {"name": "Asha"} (c) {'name': 'Asha'} (d) {name = "Asha"}
+ANSWER:(b) {"name": "Asha"}
+
+17. const arr = [1, 2]; arr.push(3); What happens?
+(a) TypeError (b) arr becomes [1, 2, 3] (c) arr stays [1, 2] (d) SyntaxError
+ANSWER:(b) arr becomes [1, 2, 3]
+
+18. What does [...a] do for an array a?
+(a) Deletes a (b) Makes a copy of a (c) Sorts a (d) Joins a to a string
+ANSWER:(b) Makes a copy of a
+
+19. Which method returns the first item that matches a test?
+(a) filter() (b) find() (c) map() (d) some()
+ANSWER:(b) find() 
+
+20. What is a callback?
+(a) An error message (b) A function passed as an argument to another function (c) A loop (d) A kind
+of variable
+ANSWER:(b) A function passed as an argument to another function 
