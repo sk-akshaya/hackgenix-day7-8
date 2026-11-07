@@ -1,0 +1,76 @@
+D2. Debug the Code:
+
+Bug 1. The result is NaN.
+function add(a, b) { console.log(a + b); }
+let r = add(1, 2);
+console.log(r + 1);
+ANSWER:The function prints the result but does not return any value. So r gets undefined, and adding 1 gives NaN.
+CORRECTED CODE:
+function add(a,b){
+    return a+b;
+}
+let r=add(1,2);
+console.log(r+1);
+
+Bug 2. It prints the function instead of the text.
+const greet = () => "Hi";
+ANSWER:The function is not called. Add () to call it.
+CORRECTED CODE:
+const greet=()=>"Hi";
+console.log(greet());
+
+Bug 3. The numbers are not in the right order.
+const nums = [10, 9, 1, 100];
+nums.sort();
+console.log(nums);
+ANSWER:sort() sorts numbers as strings by default. Use (a,b)=>a-b for ascending order.
+CORRECTED CODE:
+const nums=[10,9,1,100];
+nums.sort((a,b)=>a-b);
+console.log(nums);
+
+Bug 4. An error appears for an empty list.
+const prices = []; const total = prices.reduce((s, p) => s + p);
+ANSWER:reduce() needs an initial value when the array is empty.
+CORRECTED CODE:
+const prices=[];
+const total=prices.reduce((s,p)=>s+p,0);
+console.log(total);
+
+Bug 5. The value is undefined.
+const student = { name: "Asha" }; console.log(student.Name);
+ANSWER:Property names are case-sensitive. Use name instead of Name.
+CORRECTED CODE:
+const student={name:"Asha"};
+console.log(student.name);
+
+Bug 6. The parsing fails.
+const data = JSON.parse("{'name': 'Asha'}");
+ANSWER:JSON requires double quotes around keys and string values.
+CORRECTED CODE:
+const data=JSON.parse('{"name":"Asha"}');
+console.log(data);
+
+Bug 7. The original list is changed too.
+const original = [1, 2, 3];
+const copy = original;
+copy.push(4);
+console.log(original);
+ANSWER:Both variables refer to the same array. Use spread (...) to create a copy.
+CORRECTED CODE:
+const original=[1,2,3];
+const copy=[...original];
+copy.push(4);
+console.log(original);
+
+Bug 8. The name is undefined.
+const person = { name: "Ravi", show: () => console.log(this.name) }; person.show();
+ANSWER:Arrow functions do not have their own this. Use a normal function.
+CORRECTED CODE:
+const person={
+    name:"Ravi",
+    show:function(){
+        console.log(this.name);
+    }
+};
+person.show();

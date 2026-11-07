@@ -1,0 +1,33 @@
+<!--Read 5 products from a JSON text, filter by price range, sort by price, map to display labels and
+show them as a list on the page.-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Product List</title>
+</head>
+<body>
+    <h2>Products</h2>
+    <ul id="productList"></ul>
+    <script>
+        let jsonData=`[
+    {"name":"Laptop","price":50000},
+    {"name":"Mouse","price":500},
+    {"name":"Keyboard","price":1500},
+    {"name":"Phone","price":25000},
+    {"name":"Headphones","price":3000}
+]`;
+
+let products=JSON.parse(jsonData);
+
+let filtered=products.filter((p)=>p.price>=1000 && p.price<=30000);
+
+let sorted=filtered.sort((a,b)=>a.price-b.price);
+
+let labels=sorted.map((p)=>p.name+" - ₹"+p.price);
+
+let list=document.getElementById("productList");
+
+list.innerHTML=labels.map((item)=>`<li>${item}</li>`).join("");
+    </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+D1. Predict the Result:
+
+Q1. What is printed?
+console.log(add(2, 3)); function add(a, b) { return a + b; }
+ANSWER:5
+
+Q2. What are the two results?
+const f = n => n * 2; console.log(f(4), f("3"));
+ANSWER:8, 6
+
+Q3. What are the two results?
+const a = [1, 2, 3];
+const b = a;
+b.push(4);
+console.log(a.length, a === b);
+PREDICT:3, false
+ANSWER:4, true
+
+Q4. What is printed?
+console.log([10, 9, 100, 1].sort());
+PREDICT:[1,9,10,100]
+ANSWER:[1, 10, 100, 9]
+
+Q5. What is printed?
+console.log([1, 2, 3, 4].map(n => n * n).filter(n => n > 4));
+PREDICT:[1,4,9]
+ANSWER:[9,16]
+
+Q6. What is printed?
+console.log([1, 2, 3].reduce((s, n) => s + n));
+ANSWER:6
+
+Q7. What are o and c?
+const o = { a: 1 };
+const c = { ...o, a: 2, b: 3 };
+console.log(o, c);
+ANSWER:o={a:1}  c={a:2,b:3}
+
+Q8. What are the three results?
+console.log(typeof [], Array.isArray([]), [1] === [1]);
+ANSWER:object, true, false
+
+Q9. What are the two results?
+let x = 1;
+function f() { let x = 2; return x; }
+console.log(f(), x);
+ANSWER:2 1
+
+Q10. What text is printed?
+console.log(JSON.stringify({ a: undefined, b: () => 1, c: NaN, d: "x" }));
+ANSWER:{"c":null,"d":"x"}
